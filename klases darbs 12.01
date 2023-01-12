@@ -1,0 +1,73 @@
+#include <iostream>
+using namespace std;
+string parolein;
+int agedog = -20;
+string parole = "abcd";
+int agecat = -20;
+int mark;
+int studentage;
+int height;
+string login="12345";
+string loginin;
+void animalsage() {
+	cout << "enter dogs age\n";
+	cin >> agedog;
+	if (agedog > 0 && agedog < 30)
+		cout << "correct age";
+	else
+		cout << "uncorrect age\n";
+	cout << "Enter cats age";
+	cin >> agecat;
+	if (agecat > 0 && agecat < 20)
+		cout << "correct age";
+	else
+		cout << "incorrect age\n";
+
+}
+void student() {
+
+	cout << "enter your mark";
+	cin >> mark;
+	if (mark > 0 && mark < 10)
+		cout << "mark is correct\n";
+	else
+		cout << "mark is incorrect\n";
+	cout << "enter your age";
+	cin >> studentage;
+	if (studentage > 7 && studentage < 20)
+		cout << "age is correct\n";
+	else
+		cout << "age is incorrect\n";
+	cout << "enter your height";
+	cin >> height;
+	if (height < 0 && height>200)
+		cout << "height is correct\n";
+	else
+		cout << "height is incorrect\n";
+}
+
+int main() {
+	cout << "_______________________\n\n";
+	cout << "enter login:       ";
+		cin >> loginin;
+
+
+
+	cout << "enter password:    ";
+		cin >> parolein;
+		cout << "_______________________\n";
+		if (parole == parolein&&  login==loginin)
+			cout << "your pass is ok";
+		else
+			cout << "password or login is wrong";
+	
+
+
+
+
+
+
+
+	return 0;
+
+}
