@@ -1,0 +1,135 @@
+#include <iostream>
+using namespace std;
+int a = 0;
+int i = 1;
+int x = 0;
+string pass = "123456";
+string pass1;
+string u1;
+string u2 = "papaka";
+string name = "JohnPork";
+string name1;
+int o = 0;
+
+void ad() {
+
+	do {
+		cout << a << endl;
+		a += 1;
+		cin >> u1;
+
+	} while (a < 3 && u1 != u2);
+	if (u1 == u2)
+		cout << "password accepted";
+	else cout << "out of attempts";
+
+
+
+}
+void imultiply() {
+
+
+
+
+
+	do {
+		cout << i << "-2pakape=" << i * i << endl;
+		i++;
+
+
+
+
+	} while (i < 20);
+
+
+}
+bool isnumber(string s) {
+
+	for (int y = 0; y < s.length(); y++)
+		if (isdigit(s[y]) == false) {
+			return false;
+
+		}
+	return true;
+
+}
+void checknum() {
+
+	do {
+		cout << "guess my name\n";
+		cin >> name1;
+		if (name == name1) {
+			cout << "congrats you guessed\n";
+		}
+
+		if (isnumber(name1)) {
+			cout << "that is number\n";
+		}
+		else {
+			cout << "it isnt a number\n";
+		}
+
+
+	} while (name != name1);
+
+
+
+
+
+
+
+
+
+
+
+}
+
+
+int main() {
+	do {
+		cout << "guess my name\n";
+		cin >> name1;
+		if (name == name1) {
+			cout << "congrats you guessed\n";
+		}
+
+		if (isnumber(name1)) {
+			cout << "that is number\n";
+		}
+		else {
+			cout << "it isnt a number\n";
+		}
+
+		o++;
+	} while (name != name1 && o < 3);
+	if (o == 3) {
+		cout << "out of attempts";
+		return 0;
+	}
+	do {
+		cout << "enter pass";
+		cin >> pass1;
+
+		if (isnumber(pass1)) {
+			cout << "that is number\n";
+		}
+		else {
+			cout << "enter number\n";
+		}
+
+		if (pass != pass1)
+			cout << "try again\n";
+		x++;
+	} while (pass != pass1 && x < 3);
+	if (x == 3) {
+		cout << "out of attempts";
+		return 0;
+	}
+
+	cout << "congrats you loggined";
+
+
+
+
+
+}
