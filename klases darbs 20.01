@@ -1,0 +1,100 @@
+#include<iostream>
+using namespace std;
+int  num;
+int num1;
+int num2 = 10;
+int name = 0;
+int passcounter = 0;
+int i = 0;
+int i1=0;
+string pass;
+string name1;
+string passc = "papaka";
+void password() {
+	do {
+		cout << "enter pass\n";
+		cin >> pass;
+		if (passc == pass) {
+			cout << "you loggined\n";
+		}
+
+		passcounter++;
+	} while (passc != pass && passcounter < 2);
+	if (passcounter == 2 && passc != pass) {
+		cout << "you are out";
+	}
+}
+void divkarso() {
+	for (int x = 1; x < 101; x++) {
+
+		cout << x << "*2=" << x * 2 << endl;
+
+
+
+	}
+}
+void numcheck() {
+	cout << "enter a number";
+	cin >> num;
+	if (num < 0) {
+		cout << "number is lower than 0/negative";
+
+
+	}
+	else if (num <= 20) {
+		cout << "number is lower than 20 or equal to 20";
+	}
+	else {
+		cout << "number is more than 20";
+	}
+}
+void num1check() {
+	cout << "enter a number";
+	cin >> num;
+	if (num1 < 30) {
+		cout << "number is lower than 30";
+
+
+	}
+	else if (num1 > 100) {
+		cout << "number is higher than 100";
+	}
+	else {
+		cout << "number is beetween 30 and 100";
+	}
+}
+void namecheck() {
+
+	while (name < 20) {
+		cout << "Papaka" << endl;
+		name++;
+
+	}
+	cout << "I am done";
+}
+void tenmin1() {
+	while (num2 > 0) {
+		cout << num2 << endl;
+		num2--;
+
+	}
+}
+void multiword() {
+	while (i < 10) {
+		cout << "enter any word";
+		cin >> name1;
+		while (i1 < 10) {
+			cout << name1 << endl;
+			i1++;
+		}
+		i1 = 0;
+
+		i++;
+
+	}
+}
+int main() {
+	
+	return 0;
+	
+}
