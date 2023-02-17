@@ -1,0 +1,89 @@
+#include <iostream>;
+#include <vector>;
+using namespace std;
+int y,z=1;
+int i,i1 = 1;
+int x = 1;
+int countrymem;
+int phone;
+int main() {
+	vector<int>p{};
+	
+	do {
+		x = 1;
+		do {
+			if (i % x != 0) {
+				p.push_back(i);
+				x++;
+			}
+		} while (x < i);
+		i++;
+	}
+	while(i<10);
+	while (size(p) < z) {
+		cout << p[z];
+		z++;
+	}
+		
+
+}
+void pirmuzd() {
+	vector<int>sk{ 1, 2, 3, 1, 2 };
+	do {
+		if (sk[i] == 1) {
+			cout << "skaitlis pec rindas " << i << "-vectora vienads ar 1" << endl;
+		}
+		i++;
+	} while (i < 6);
+	do {
+		if (sk[i] == 4) {
+			cout << "skaitlis pec rindas " << i << "vectora vienads ar 1" << endl;
+		}
+		i++;
+	} while (i < 6);
+
+}
+void otruzd() {
+	int x;
+	string country;
+	vector<string>c{ "USA" , "UK","China","India","Canada","Austalia" };
+	vector<int>n{ 1,44,86,91,1,61 };
+	cout << "enter country name";
+	cin >> country;
+	while (i < 6) {
+		if (country == c[i]) {
+			cout << "your country code - +" << n[i] << endl;
+			countrymem = i;
+			x = 1;
+		}
+
+		i++;
+	}
+	if (x != 1) {
+		cout << "tadas valstis neeksiste";
+	}
+	cout << "enter number";
+	cin >> phone;
+	cout << "+" << n[countrymem] << phone;
+
+}
+
+void trisuzd(){
+	int atzime, x;
+
+	vector<int> a{ 3,8,7,4 };
+	vector<string> u{ "Anna","Antons","Vlads","Artemijs" };
+	cout << "enter atzimi";
+	cin >> atzime;
+	while (i < 4) {
+		if (atzime == a[i]) {
+			cout << "skolniekam-" << u[i] << " ir tada atzime" << endl;
+			x = 1;
+		}
+
+		i++;
+	}
+	if (x != 1) {
+		cout << "tadas atzimes nevienam no skolniekiem nav";
+	}
+}
