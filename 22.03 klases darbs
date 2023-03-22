@@ -1,0 +1,121 @@
+#include <iostream>;
+#include <vector>;
+int i = 0;
+using namespace std;
+int main() {
+	string country;
+	string code;
+	int a1 = 0;
+	vector <string>c{ "+1","+44","+86","+91","+1","+61" };
+	vector <string>d{ "USA","UK","China","India","Canada","Australia" };
+	cout << "please enter country\n";
+	cin >> country;
+	do {
+		if (country == d[i]) {
+			cout << d[i] << "kods ir " << c[i];
+			a1++;
+		}
+		i++;
+
+	} while (i < d.size());
+
+	i = 0;
+	if (a1 == 0)
+		cout << "\ntada valsts nav";
+	cout << "please enter code\n";
+	a1 = 0;
+	cin >> code;
+	do {
+		if (code == c[i]) {
+			cout << c[i] << "valsts kods ir" << d[i];
+			a1++;
+		}
+		i++;
+
+	} while (i < d.size());
+	cout << endl;
+
+	if (a1 == 0) {
+		cout << "tada koda nav";
+	}
+	i = 0;
+	d.pop_back();
+	d.push_back("latvia");
+	c.pop_back();
+	c.push_back("+371");
+	c.at(1) = "+372";
+	d.at(1) = "Igaunija";
+	while (i < c.size()) {
+		cout << c[i] << "-" << d[i] << endl;
+		i++;
+	}
+
+
+}
+void a() {
+	vector <int>a{ 1,2,5,6,7,3,1,2 };
+	while (i < a.size()) {
+		if (a[i] == 3) {
+
+			cout << i << " elements ir 3\n";
+
+
+		}
+
+
+		i++;
+	}
+	i = 0;
+	while (i < a.size()) {
+		if (a[i] == 5) {
+
+			cout << i << "elements ir 5\n";
+
+		}
+
+		i++;
+
+
+	}
+	i = 0;
+	a.pop_back();
+	a.at(4) = 5;
+	a.push_back(3);
+	while (i < a.size()) {
+		cout << a[i] << endl;
+		i++;
+	}
+
+
+
+
+
+}
+void b() {
+	vector <string>b{ "galds","kresls","lampa","dators","durvis" };
+	while (i < b.size()) {
+		if (b[i] == "galds") {
+			cout << i << " elementa vertiba ir dators\n";
+
+		}
+
+		if (b[i] == "skapis") {
+			cout << i << " elementa vertiba ir skapis\n";
+
+		}
+
+
+		i++;
+
+	}
+	i = 0;
+	b.pop_back();
+	b.push_back("logs");
+	b.at(3) = "laptops";
+	while (i < b.size()) {
+		cout << b[i] << endl;
+		i++;
+	}
+
+	i = 0;
+}
